@@ -1,0 +1,107 @@
+/* =============
+    associations
+============= */
+@use "../helpers";
+
+#associations {
+    background: 
+        linear-gradient(135deg, rgba(20,20,21,0.12) 75%, rgba(62,39,35,0.05) 100%),
+        url("../img/parchment.jpg") center center/cover no-repeat;
+    color: var(--jaguar);
+    padding: 56px 24px;
+    font-family: 'Merriweather', serif;
+    border-radius: 36px;
+    max-width: 1300px;
+    margin: 32px auto;
+
+    h1 {
+        font-family: 'Cinzel', serif;
+        color: var(--darknavy);
+        font-size: 2.3rem;
+        margin-bottom: 36px;
+        letter-spacing: 1px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .associations-info ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .associations-info li {
+        list-style: none;
+        margin: 34px 0;
+        background: rgba(255,255,255,0.94);
+        border-radius: 24px;
+        box-shadow: 0 2px 14px 0 var(--lightgrey);
+        padding: 32px 18px 24px 18px;
+        border: 1.5px solid var(--grey);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+        transition: box-shadow 0.19s, transform 0.15s;
+
+        &:hover {
+            box-shadow: 0 6px 20px 0 var(--nightblue), 0 0 0 2px var(--aqua);
+            transform: translateY(-2px) scale(1.01);
+        }
+    }
+
+    .associations-info img {
+        display: block;
+        margin: 0 auto 12px auto;
+        max-width: 110px;
+        width: 110px;
+        height: 110px;
+        object-fit: contain;
+        border-radius: 16px;
+        background: #f9fdff;
+        border: 2px solid var(--lightgrey);
+        box-shadow: 0 2px 12px 0 #ede5d7;
+    }
+
+    .associations-info li:nth-child(3) img,
+    .associations-info li:nth-child(4) img {
+        max-width: 140px;
+        width: 140px;
+        height: 140px;
+    }
+
+    .associations-info h2 {
+        font-family: 'Cinzel', serif;
+        color: var(--darknavy);
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 12px 0 10px 0;
+        text-align: center;
+        letter-spacing: 0.3px;
+    }
+
+    .associations-info p {
+        color: var(--jaguar);
+        font-family: 'Merriweather', serif;
+        font-size: 1.07rem;
+        margin: 6px 0 0 0;
+        text-align: center;
+        line-height: 1.5;
+        font-weight: 500;
+        max-width: 90%;
+    }
+
+    @include helpers.sm {
+        padding: 22px 2px;
+        h1 { font-size: 1.3rem; }
+        .associations-info li { padding: 10px 3px 10px 3px; }
+        .associations-info img { width: 72px; height: 72px; }
+    }
+    @include helpers.md {
+        padding: 32px 7px;
+        h1 { font-size: 1.7rem; }
+        .associations-info img { width: 90px; height: 90px; }
+    }
+}

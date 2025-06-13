@@ -1,0 +1,96 @@
+/* =============
+    About
+============= */
+@use "../helpers";
+
+#about {
+    background: 
+        linear-gradient(135deg, rgba(20,20,21,0.24) 75%, rgba(62,39,35,0.12) 100%),
+        url("../img/parchment.jpg") center center/cover no-repeat;
+    color: var(--jaguar);
+    padding: 56px 24px;
+    font-size: helpers.rem-calc(44);
+    font-weight: 500;
+    font-family: 'Merriweather', serif;
+
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    border: 3px solid var(--grey);
+    border-radius: 32px;
+    box-shadow: 0 6px 32px 0 rgba(0,4,53,0.13);
+
+    max-width: 1225px;    
+    margin: 32px auto; 
+
+    h1 {
+        font-family: 'Cinzel', serif;
+        font-size: 44px;
+        letter-spacing: 2px;
+        color: var(--darknavy);
+        margin-bottom: 12px;
+        font-weight: 700;
+        text-shadow: 1px 2px 5px var(--snowdrop), 0 1px 0 #dac09077;
+    }
+    p {
+        color: var(--black);
+        font-size: helpers.rem-calc(17);
+        margin-bottom: 24px;
+    }
+
+    img {
+        border-radius: 10px;
+        max-width: 260px;
+        width: 60%; 
+        height: auto; 
+        box-shadow: 0 4px 16px 0 var(--grey), 0 0 0 7px var(--lilywhite);
+        border: 4px solid var(--amber);
+        background: var(--white);
+        transition: box-shadow 0.3s, border 0.3s;
+        margin: 24px auto 0;
+
+        &:hover {
+            box-shadow: 0 10px 40px 0 var(--amber), 0 0 0 10px var(--forest);
+            border: 3px solid var(--forest);
+        }
+    }
+
+    .about-text {
+        background: rgba(255,255,255,0.74);
+        border-radius: 14px;
+        max-width: 800px;
+        margin: 0 auto 22px auto;
+        padding: 32px 32px 20px 32px;
+        text-align: left;
+        box-shadow: 0 2px 14px 0 var(--amber);
+        font-size: helpers.rem-calc(18);
+        line-height: 1.7;
+        color: var(--jaguar);
+        font-family: 'Merriweather', serif;
+    }
+    
+    .about-highlight {
+        color: var(--amber);
+        font-weight: 700;
+    }
+
+    @include helpers.sm {
+        padding: 36px 8px;
+        h1 { font-size: helpers.rem-calc(27); }
+        img { max-width: 85%; }
+    }
+    @include helpers.md {
+        padding: 48px 18px;
+        img { max-width: 65%; }
+    }
+    @include helpers.lg {
+        padding: 56px 24px;
+        img { max-width: 45%; }
+    }
+    @include helpers.xl {
+        padding: 64px 40px;
+        img { max-width: 35%; }
+    }
+}

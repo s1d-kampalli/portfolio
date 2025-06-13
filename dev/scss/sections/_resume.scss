@@ -1,0 +1,130 @@
+/* =============
+    resume
+============= */
+@use "../helpers";
+
+#resume {
+    background:
+        linear-gradient(135deg, rgba(20,20,21,0.10) 75%, rgba(62,39,35,0.04) 100%),
+        url("../img/parchment.jpg") center center/cover no-repeat;
+    color: var(--jaguar);
+    font-family: 'Merriweather', serif;
+    font-size: helpers.rem-calc(17);
+    line-height: 1.7;
+    font-weight: 500;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 34px;
+
+    max-width: 1300px;
+    margin: 54px auto 54px auto;
+    padding: 54px 64px;
+
+
+    .resume-intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 28px;
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--darknavy);
+            font-size: helpers.rem-calc(44);
+            margin-bottom: 12px;
+            letter-spacing: 1.2px;
+        }
+
+        a {
+            display: block;
+            margin: 7px 0 0 0;
+            color: var(--royal);
+            font-weight: 600;
+            text-decoration: underline;
+            transition: color 0.17s;
+            font-size: helpers.rem-calc(17);
+
+            &:hover {
+                color: var(--amber);
+                text-decoration: underline solid;
+            }
+        }
+    }
+
+
+    .resume-section-title {
+        font-family: 'Cinzel', serif;
+        font-size: helpers.rem-calc(26);
+        color: var(--darknavy);
+        border-bottom: 2.5px solid var(--amber);
+        display: inline-block;
+        margin: 46px 0 18px 0;
+        padding-bottom: 4px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-top: 36px;
+        margin-bottom: 0;
+        gap: 10px;
+
+        .job-title {
+            font-weight: 700;
+            font-size: helpers.rem-calc(18);
+            color: var(--darknavy);
+        }
+        .job-dates {
+            color: var(--grey);
+            font-size: helpers.rem-calc(15);
+            font-style: italic;
+            min-width: 160px;
+            text-align: right;
+            white-space: nowrap;
+        }
+    }
+
+    ul {
+        margin: 0 0 24px 28px;
+        padding: 0;
+        text-align: left;
+    }
+    li {
+        margin-bottom: 8px;
+        font-size: helpers.rem-calc(17);
+        color: var(--jaguar);
+        line-height: 1.7;
+    }
+
+    .resume-highlight {
+        color: var(--amber);
+        font-weight: 700;
+    }
+
+    .job-header + ul {
+        margin-bottom: 26px;
+    }
+
+    @include helpers.sm {
+        padding: 18px 4vw;
+        font-size: helpers.rem-calc(15);
+
+        .resume-intro h1 { font-size: helpers.rem-calc(26); }
+        .resume-section-title { font-size: helpers.rem-calc(18); }
+        .job-title { font-size: helpers.rem-calc(14); }
+        .job-dates { font-size: helpers.rem-calc(12); }
+        ul { margin-left: 14px; }
+    }
+
+    @include helpers.md {
+        padding: 28px 6vw;
+        .resume-intro h1 { font-size: helpers.rem-calc(32); }
+        .resume-section-title { font-size: helpers.rem-calc(20); }
+    }
+}

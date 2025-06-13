@@ -1,0 +1,87 @@
+/* =============
+    home
+============= */
+@use "../helpers";
+
+#home {
+    background:
+        linear-gradient(135deg, rgba(20,20,21,0.14) 75%, rgba(62,39,35,0.09) 100%),
+        url("../img/parchment.jpg") center center/cover no-repeat;
+    color: var(--jaguar);
+    padding: 56px 24px;
+    font-size: helpers.rem-calc(16);
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid var(--grey);
+    border-radius: 36px;
+
+    max-width: 1250px;
+    margin: 24px auto;
+
+    h2 {
+        font-family: 'Cinzel', serif;
+        color: var(--darknavy);
+        font-size: helpers.rem-calc(28);
+        letter-spacing: 1.5px;
+        margin-bottom: 14px;
+        margin-top: 8px;
+        text-shadow: 1px 2px 7px var(--white), 0 1px 0 var(--lightgrey);
+    }
+    h3 {
+        color: var(--nightblue);
+        font-size: helpers.rem-calc(20);
+        margin-bottom: 12px;
+        font-family: 'Cinzel', serif;
+        font-style: italic;
+        font-weight: 600;
+    }
+
+    p {
+        color: var(--black);
+        font-size: helpers.rem-calc(18);
+        margin-bottom: 18px;
+    }
+
+    img {
+        border-radius: 18px;
+        max-width: 380px;
+        width: auto;
+        height: auto;
+        display: block;
+        margin: 36px auto 36px auto;
+        box-shadow: 0 4px 24px 0 var(--grey), 0 0 0 12px var(--lilywhite);
+        border: 5px solid var(--amber);
+        transition: box-shadow 0.3s, border 0.3s;
+        background: var(--white);
+
+        &:hover {
+            box-shadow: 0 10px 36px 0 var(--amber), 0 0 0 16px var(--lilywhite);
+            border: 5px solid var(--forest);
+        }
+    }
+
+    @include helpers.sm {
+        padding: 22px 4px;
+        h1 { font-size: helpers.rem-calc(22); }
+        h3 { font-size: helpers.rem-calc(14); }
+        img { max-width: 70vw; }
+    }
+    @include helpers.md {
+        padding: 38px 12px;
+        h1 { font-size: helpers.rem-calc(32); }
+        img { max-width: 40vw; }
+    }
+    @include helpers.lg {
+        padding: 48px 18px;
+        img { max-width: 32vw; }
+    }
+    @include helpers.xl {
+        padding: 58px 28px;
+        img { max-width: 320px; }
+    }
+}
