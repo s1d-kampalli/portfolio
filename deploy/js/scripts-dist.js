@@ -11,3 +11,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var options = {
+    strings: [
+      "Let's connect!",
+      "Email me at sk3999@drexel.edu.",
+      "Find me on LinkedIn.",
+      "Let's chat tech, security, or Drexel!"
+    ],
+    typeSpeed: 40,
+    backSpeed: 30,
+    backDelay: 1500,
+    startDelay: 400,
+    loop: true
+  };
+
+  new Typed('#typed-contact', options);
+});

@@ -674,6 +674,16 @@ textarea {
   margin-bottom: 22px;
   letter-spacing: 1px;
 }
+#contact #typed-contact {
+  display: block;
+  color: var(--darknavy);
+  font-family: "Cinzel", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  min-height: 1.5em;
+  letter-spacing: 1px;
+}
 #contact p {
   color: var(--jaguar);
   font-size: 1.13rem;
